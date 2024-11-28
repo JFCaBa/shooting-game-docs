@@ -16,21 +16,30 @@ ShootingDApp is a location-based shooting game where players can:
 
 ### Gameplay
 - Real-time location-based combat
-- AR-enhanced shooting mechanics
+- AR-enhanced shooting mechanics with ammo management
+- Player health and respawn system
+- Shot validation and hit detection
 - Team-based gameplay modes
 - Tournament system with rankings
+- Achievement tracking and milestones
 
 ### Web3 Integration
 - SHOT token rewards
 - Achievement NFT collection
+  - Kills milestones
+  - Accuracy achievements
+  - Survival time records
+  - Tournament victories
 - MetaMask wallet connection
 - Cross-chain compatibility (Coming Q3 2025)
 
 ### Technical Features
 - Real-time WebSocket communication
 - Location-based player matching
+- AR camera integration
 - Anti-cheat protection
 - Secure blockchain transactions
+- Persistent player data storage
 
 ## Quick Navigation
 

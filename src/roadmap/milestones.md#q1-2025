@@ -1,1 +1,24 @@
-# Q1 2025
+## Q1 2025
+### Smart Contract Deployment
+- SHOT token launch on Sepolia testnet
+- Achievement NFT contract implementation
+- Smart contract security audit completion
+- Vesting contract deployment
+
+### Basic Gameplay Mechanics
+- AR-based shooting system
+- Real-time player location tracking
+- Hit detection and verification
+- Basic player stats system
+
+### MetaMask Integration
+- Wallet connection system
+- Token rewards distribution
+- Transaction signing implementation
+- Error handling and recovery
+
+### Initial NFT Collection
+- Achievement-based NFTs
+- Basic metadata structure
+- Minting mechanics
+- NFT display in game
