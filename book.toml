@@ -6,19 +6,17 @@ src = "src"
 title = "ShootingDApp Documentation"
 
 [output.html]
-mathjax-support = true
-site-url = "/shooting-game-docs/"
 git-repository-url = "https://github.com/JFCaBa/shooting-game-docs"
 edit-url-template = "https://github.com/JFCaBa/shooting-game-docs/edit/main/{path}"
-theme = "theme"
-additional-css = ["theme/css/custom.css"]
+site-url = "/shooting-game-docs/"
+default-theme = "light"
+preferred-dark-theme = "navy"
+additional-css = ["theme/custom.css"]
+additional-js = ["theme/custom.js"]
 
-[preprocessor.mermaid]
-command = "mdbook-mermaid"
-
-[output.html.playground]
+[output.html.playpen]
 editable = true
-line-numbers = true
+copy-js = true
 
 [output.html.search]
 limit-results = 20
@@ -28,3 +26,6 @@ boost-hierarchy = 2
 boost-paragraph = 1
 expand = true
 heading-split-level = 2
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
