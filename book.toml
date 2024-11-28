@@ -1,0 +1,30 @@
+[book]
+authors = ["Jose Catala"]
+language = "en"
+multilingual = false
+src = "src"
+title = "ShootingDApp Documentation"
+
+[output.html]
+mathjax-support = true
+site-url = "/shooting-game-docs/"
+git-repository-url = "https://github.com/JFCaBa/shooting-game-docs"
+edit-url-template = "https://github.com/JFCaBa/shooting-game-docs/edit/main/{path}"
+theme = "theme"
+additional-css = ["theme/css/custom.css"]
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[output.html.playground]
+editable = true
+line-numbers = true
+
+[output.html.search]
+limit-results = 20
+use-boolean-and = true
+boost-title = 2
+boost-hierarchy = 2
+boost-paragraph = 1
+expand = true
+heading-split-level = 2
