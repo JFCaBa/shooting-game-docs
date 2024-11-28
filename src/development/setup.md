@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-- Xcode 15.0+
+- Xcode 15.3+
 - iOS 17.0+
 - Swift 5.9
 - Node.js v18+
