@@ -9,17 +9,12 @@
 - Hardhat
 - MetaMask iOS app
 
-## Repository Structure
+## Repositories in the Project
 
 ```
-shooting-app/
-├── iOS/                  # iOS client application
-├── contracts/            # Smart contracts
-│   ├── src/
-│   └── test/
-└── server/              # Game server
-    ├── src/
-    └── test/
+shootingApp/                # iOS client application
+shooting-game-token/        # Smart contracts             
+shootingApp-server/         # Game server
 ```
 
 ## Environment Setup
