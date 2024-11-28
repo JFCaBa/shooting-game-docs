@@ -31,16 +31,6 @@ git clone https://github.com/JFCaBa/ShootingApp.git
 cd ShootingApp/iOS
 ```
 
-2. Install dependencies
-```bash
-pod install
-```
-
-3. Open workspace
-```bash
-open ShootingApp.xcworkspace
-```
-
 ### Smart Contract Development
 1. Install dependencies
 ```bash
