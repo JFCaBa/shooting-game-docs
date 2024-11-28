@@ -8,6 +8,12 @@
 - MetaMask integration
 - Performance optimization
 
+### Android Development
+- Core game mechanics
+- AR implementation
+- MetaMask integration
+- Performance optimization
+
 ### Blockchain Development
 - Smart contract development
 - Token management
