@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Deployment - ShootingDApp Documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.ico">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/css/custom.css">
+
+        <!-- Mermaid support -->
+        <script src="https://unpkg.com/mermaid@8.13.3/dist/mermaid.min.js"></script>
+        <script>
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default'
+            });
+        </script>
+    </head>
+    <body>
+        <div id="content">
+            <h1 id="deployment-guide"><a class="header" href="#deployment-guide">Deployment Guide</a></h1>
+<h2 id="current-deployment"><a class="header" href="#current-deployment">Current Deployment</a></h2>
+<h3 id="ios-app"><a class="header" href="#ios-app">iOS App</a></h3>
+<ul>
+<li>Development: TestFlight internal testing</li>
+<li>Distribution: Pending App Store review</li>
+</ul>
+<h3 id="smart-contracts"><a class="header" href="#smart-contracts">Smart Contracts</a></h3>
+<p>Currently deployed on Sepolia testnet:</p>
+<ul>
+<li>Token Contract: [Contract Address Pending]</li>
+<li>Achievement NFT: [Contract Address Pending]</li>
+</ul>
+<h3 id="game-server"><a class="header" href="#game-server">Game Server</a></h3>
+<ul>
+<li>WebSocket Server: Port 8182</li>
+<li>REST API: [Work in Progress]</li>
+</ul>
+<h2 id="deployment-process"><a class="header" href="#deployment-process">Deployment Process</a></h2>
+<h3 id="ios-app-1"><a class="header" href="#ios-app-1">iOS App</a></h3>
+<ol>
+<li>Archive in Xcode</li>
+<li>Upload to TestFlight</li>
+<li>Submit for review</li>
+</ol>
+<h3 id="smart-contracts-1"><a class="header" href="#smart-contracts-1">Smart Contracts</a></h3>
+<ol>
+<li>Deploy token contract</li>
+</ol>
+<pre><code class="language-bash">npx hardhat run scripts/deploy.ts --network sepolia
+</code></pre>
+<ol start="2">
+<li>Verify on Etherscan</li>
+</ol>
+<pre><code class="language-bash">npx hardhat verify --network sepolia [CONTRACT_ADDRESS]
+</code></pre>
+<h3 id="server-deployment"><a class="header" href="#server-deployment">Server Deployment</a></h3>
+<ol>
+<li>Build server</li>
+</ol>
+<pre><code class="language-bash">npm run build
+</code></pre>
+<ol start="2">
+<li>Start production server</li>
+</ol>
+<pre><code class="language-bash">npm start
+</code></pre>
+<h2 id="future-deployments"><a class="header" href="#future-deployments">Future Deployments</a></h2>
+<h3 id="phase-1-q1-2025"><a class="header" href="#phase-1-q1-2025">Phase 1 (Q1 2025)</a></h3>
+<ul>
+<li>Mainnet contract deployment</li>
+<li>Production server infrastructure</li>
+<li>App Store release</li>
+</ul>
+<h3 id="phase-2-q2-2025"><a class="header" href="#phase-2-q2-2025">Phase 2 (Q2 2025)</a></h3>
+<ul>
+<li>Multiple server regions</li>
+<li>Load balancing</li>
+<li>Advanced monitoring</li>
+</ul>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+    </body>
+</html>

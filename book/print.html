@@ -1,0 +1,727 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>ShootingDApp Documentation</title>
+        <meta name="robots" content="noindex" />
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="theme/css/custom.css">
+
+        <!-- Mermaid support -->
+        <script src="https://unpkg.com/mermaid@8.13.3/dist/mermaid.min.js"></script>
+        <script>
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default'
+            });
+        </script>
+    </head>
+    <body>
+        <div id="content">
+            <h1 id="shootingdapp-documentation"><a class="header" href="#shootingdapp-documentation">ShootingDApp Documentation</a></h1>
+<p>Welcome to the official documentation for ShootingDApp, a blockchain-based shooting game that combines traditional FPS mechanics with Web3 technology.</p>
+<h2 id="about-shootingdapp"><a class="header" href="#about-shootingdapp">About ShootingDApp</a></h2>
+<p>ShootingDApp is a location-based shooting game where players can:</p>
+<ul>
+<li>Compete in real-world environments</li>
+<li>Earn tokens through gameplay</li>
+<li>Collect achievement NFTs</li>
+<li>Participate in tournaments</li>
+<li>Connect their MetaMask wallet for rewards</li>
+</ul>
+<h2 id="quick-navigation"><a class="header" href="#quick-navigation">Quick Navigation</a></h2>
+<ul>
+<li>Check our <a href="tokenomics/overview.html">tokenomics</a> to understand the SHOT token</li>
+<li>Review our <a href="technical/architecture.html">technical architecture</a></li>
+<li>Learn about our <a href="smart-contracts/token.html">smart contracts</a></li>
+<li>Explore the <a href="roadmap/phases.html">development roadmap</a></li>
+</ul>
+<h2 id="getting-started"><a class="header" href="#getting-started">Getting Started</a></h2>
+<ol>
+<li>Install MetaMask</li>
+<li>Connect your wallet</li>
+<li>Start playing and earning</li>
+<li>Collect achievements</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="token-overview"><a class="header" href="#token-overview">Token Overview</a></h1>
+<p>The SHOT token powers the ShootingDApp ecosystem, providing utility and rewards.</p>
+<h2 id="token-details"><a class="header" href="#token-details">Token Details</a></h2>
+<ul>
+<li>Name: ShootingDApp Token</li>
+<li>Symbol: SHOT</li>
+<li>Decimals: 18</li>
+<li>Total Supply: 1,000,000,000 SHOT (1 billion)</li>
+</ul>
+<h2 id="token-utility"><a class="header" href="#token-utility">Token Utility</a></h2>
+<ul>
+<li>Game rewards for achievements</li>
+<li>Tournament participation</li>
+<li>Achievement NFT minting</li>
+<li>Future governance voting</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="token-distribution"><a class="header" href="#token-distribution">Token Distribution</a></h1>
+<p>The total supply of 1,000,000,000 SHOT is distributed as follows:</p>
+<h2 id="distribution-breakdown"><a class="header" href="#distribution-breakdown">Distribution Breakdown</a></h2>
+<ul>
+<li>Team &amp; Development (30%): 300,000,000 SHOT</li>
+<li>Ecosystem &amp; Rewards (35%): 350,000,000 SHOT</li>
+<li>Marketing &amp; Partnerships (15%): 150,000,000 SHOT</li>
+<li>Community &amp; Airdrop (10%): 100,000,000 SHOT</li>
+<li>Initial Liquidity (10%): 100,000,000 SHOT</li>
+</ul>
+<h2 id="vesting-schedules"><a class="header" href="#vesting-schedules">Vesting Schedules</a></h2>
+<h3 id="team--development"><a class="header" href="#team--development">Team &amp; Development</a></h3>
+<ul>
+<li>4-year vesting period</li>
+<li>1-year cliff</li>
+<li>Monthly unlocks after cliff</li>
+</ul>
+<h3 id="ecosystem--rewards"><a class="header" href="#ecosystem--rewards">Ecosystem &amp; Rewards</a></h3>
+<ul>
+<li>Released based on player growth and achievement milestones</li>
+<li>Controlled by smart contracts</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="vesting"><a class="header" href="#vesting">Vesting</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="technical-architecture"><a class="header" href="#technical-architecture">Technical Architecture</a></h1>
+<h2 id="system-overview"><a class="header" href="#system-overview">System Overview</a></h2>
+<pre class="mermaid">graph TD
+    A[Game Client] --&gt; B[Game Server]
+    B --&gt; C[Smart Contracts]
+    C --&gt; D[Token Contract]
+    C --&gt; E[Achievement NFTs]
+    B --&gt; F[Player Database]
+    A --&gt; G[MetaMask]
+    G --&gt; C
+</pre>
+<h2 id="components"><a class="header" href="#components">Components</a></h2>
+<h3 id="game-client"><a class="header" href="#game-client">Game Client</a></h3>
+<ul>
+<li>Unity-based iOS app</li>
+<li>Web3 integration via MetaMask</li>
+<li>Real-time location tracking</li>
+<li>AR capabilities</li>
+</ul>
+<h3 id="game-server"><a class="header" href="#game-server">Game Server</a></h3>
+<ul>
+<li>WebSocket for real-time communication</li>
+<li>Player position synchronization</li>
+<li>Score tracking and verification</li>
+<li>Achievement progress monitoring</li>
+</ul>
+<h3 id="blockchain-integration"><a class="header" href="#blockchain-integration">Blockchain Integration</a></h3>
+<ul>
+<li>Ethereum Sepolia testnet</li>
+<li>Smart contracts for tokens and NFTs</li>
+<li>MetaMask for wallet connection</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="system-design"><a class="header" href="#system-design">System Design</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="security"><a class="header" href="#security">Security</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="shot-token-contract"><a class="header" href="#shot-token-contract">SHOT Token Contract</a></h1>
+<h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
+<p>The SHOT token is implemented as an ERC20 token with additional features:</p>
+<ul>
+<li>Role-based access control</li>
+<li>Pausable functionality</li>
+<li>Permit support for gasless approvals</li>
+</ul>
+<h2 id="contract-implementation"><a class="header" href="#contract-implementation">Contract Implementation</a></h2>
+<pre><code class="language-solidity">// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/access/AccessControl.sol";
+import "@openzeppelin/contracts/security/Pausable.sol";
+
+contract ShootingGameToken is ERC20, AccessControl, Pausable {
+    bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
+    bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
+
+    constructor() ERC20("ShootingGame Token", "SHOT") {
+        _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
+        _grantRole(MINTER_ROLE, msg.sender);
+        _grantRole(PAUSER_ROLE, msg.sender);
+    }
+
+    function mint(address to, uint256 amount) public onlyRole(MINTER_ROLE) {
+        _mint(to, amount);
+    }
+
+    function pause() public onlyRole(PAUSER_ROLE) {
+        _pause();
+    }
+
+    function unpause() public onlyRole(PAUSER_ROLE) {
+        _unpause();
+    }
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="achievement-nft"><a class="header" href="#achievement-nft">Achievement NFT</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="interfaces"><a class="header" href="#interfaces">Interfaces</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="development-phases"><a class="header" href="#development-phases">Development Phases</a></h1>
+<h2 id="phase-1-mvp-release-q1-2025"><a class="header" href="#phase-1-mvp-release-q1-2025">Phase 1: MVP Release (Q1 2025)</a></h2>
+<h3 id="smart-contracts"><a class="header" href="#smart-contracts">Smart Contracts</a></h3>
+<ul>
+<li>SHOT token deployment on Sepolia</li>
+<li>Basic achievement NFT implementation</li>
+<li>Security audit preparation</li>
+</ul>
+<h3 id="game-features"><a class="header" href="#game-features">Game Features</a></h3>
+<ul>
+<li>Basic shooting mechanics</li>
+<li>Location-based player detection</li>
+<li>MetaMask wallet integration</li>
+<li>Real-time player synchronization</li>
+</ul>
+<h3 id="infrastructure"><a class="header" href="#infrastructure">Infrastructure</a></h3>
+<ul>
+<li>WebSocket server setup</li>
+<li>Player data management</li>
+<li>Basic monitoring systems</li>
+</ul>
+<h2 id="phase-2-enhanced-gameplay-q2-2025"><a class="header" href="#phase-2-enhanced-gameplay-q2-2025">Phase 2: Enhanced Gameplay (Q2 2025)</a></h2>
+<h3 id="smart-contracts-1"><a class="header" href="#smart-contracts-1">Smart Contracts</a></h3>
+<ul>
+<li>Mainnet deployment</li>
+<li>Advanced achievement system</li>
+<li>Tournament smart contracts</li>
+<li>Token staking mechanics</li>
+</ul>
+<h3 id="game-features-1"><a class="header" href="#game-features-1">Game Features</a></h3>
+<ul>
+<li>Team-based gameplay</li>
+<li>Voice chat integration</li>
+<li>Tournament system</li>
+<li>Enhanced AR features</li>
+</ul>
+<h3 id="infrastructure-1"><a class="header" href="#infrastructure-1">Infrastructure</a></h3>
+<ul>
+<li>Multi-region server deployment</li>
+<li>Advanced analytics</li>
+<li>Automated scaling</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="milestones"><a class="header" href="#milestones">Milestones</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="future-plans"><a class="header" href="#future-plans">Future Plans</a></h1>
+<h2 id="technical-expansion"><a class="header" href="#technical-expansion">Technical Expansion</a></h2>
+<h3 id="layer-2-integration"><a class="header" href="#layer-2-integration">Layer 2 Integration</a></h3>
+<ul>
+<li>Optimism integration</li>
+<li>Polygon zkEVM support</li>
+<li>Cross-chain functionality</li>
+</ul>
+<h3 id="gameplay-evolution"><a class="header" href="#gameplay-evolution">Gameplay Evolution</a></h3>
+<ul>
+<li>PvE missions</li>
+<li>Clan system</li>
+<li>Special events</li>
+<li>Custom game modes</li>
+</ul>
+<h3 id="infrastructure-2"><a class="header" href="#infrastructure-2">Infrastructure</a></h3>
+<ul>
+<li>Global server presence</li>
+<li>Advanced analytics</li>
+<li>AI-powered anti-cheat</li>
+</ul>
+<h2 id="community-growth"><a class="header" href="#community-growth">Community Growth</a></h2>
+<h3 id="governance"><a class="header" href="#governance">Governance</a></h3>
+<ul>
+<li>DAO implementation</li>
+<li>Community voting</li>
+<li>Feature proposals</li>
+</ul>
+<h3 id="ecosystem"><a class="header" href="#ecosystem">Ecosystem</a></h3>
+<ul>
+<li>Partner integrations</li>
+<li>Third-party development</li>
+<li>Community tournaments</li>
+</ul>
+<h2 id="business-development"><a class="header" href="#business-development">Business Development</a></h2>
+<h3 id="partnerships"><a class="header" href="#partnerships">Partnerships</a></h3>
+<ul>
+<li>Gaming guilds</li>
+<li>Esports organizations</li>
+<li>Web3 communities</li>
+</ul>
+<h3 id="market-expansion"><a class="header" href="#market-expansion">Market Expansion</a></h3>
+<ul>
+<li>Additional networks</li>
+<li>CEX listings</li>
+<li>Regional tournaments</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="development-setup"><a class="header" href="#development-setup">Development Setup</a></h1>
+<h2 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h2>
+<ul>
+<li>Xcode 15.0+</li>
+<li>iOS 17.0+</li>
+<li>Swift 5.9</li>
+<li>Node.js v18+</li>
+<li>Hardhat</li>
+<li>MetaMask iOS app</li>
+</ul>
+<h2 id="repository-structure"><a class="header" href="#repository-structure">Repository Structure</a></h2>
+<pre><code>shooting-app/
+├── iOS/                  # iOS client application
+├── contracts/            # Smart contracts
+│   ├── src/
+│   └── test/
+└── server/              # Game server
+    ├── src/
+    └── test/
+</code></pre>
+<h2 id="environment-setup"><a class="header" href="#environment-setup">Environment Setup</a></h2>
+<h3 id="ios-development"><a class="header" href="#ios-development">iOS Development</a></h3>
+<ol>
+<li>Clone the repository</li>
+</ol>
+<pre><code class="language-bash">git clone https://github.com/JFCaBa/ShootingApp.git
+cd ShootingApp/iOS
+</code></pre>
+<ol start="2">
+<li>Install dependencies</li>
+</ol>
+<pre><code class="language-bash">pod install
+</code></pre>
+<ol start="3">
+<li>Open workspace</li>
+</ol>
+<pre><code class="language-bash">open ShootingApp.xcworkspace
+</code></pre>
+<h3 id="smart-contract-development"><a class="header" href="#smart-contract-development">Smart Contract Development</a></h3>
+<ol>
+<li>Install dependencies</li>
+</ol>
+<pre><code class="language-bash">cd contracts
+npm install
+</code></pre>
+<ol start="2">
+<li>Configure environment</li>
+</ol>
+<pre><code class="language-bash">cp .env.example .env
+# Edit .env with your configuration
+</code></pre>
+<h3 id="server-development"><a class="header" href="#server-development">Server Development</a></h3>
+<ol>
+<li>Install dependencies</li>
+</ol>
+<pre><code class="language-bash">cd server
+npm install
+</code></pre>
+<ol start="2">
+<li>Start development server</li>
+</ol>
+<pre><code class="language-bash">npm run dev
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="testing-guide"><a class="header" href="#testing-guide">Testing Guide</a></h1>
+<h2 id="ios-tests"><a class="header" href="#ios-tests">iOS Tests</a></h2>
+<p>Current test coverage includes:</p>
+<h3 id="unit-tests"><a class="header" href="#unit-tests">Unit Tests</a></h3>
+<ul>
+<li><code>GameManagerTests</code>: Game logic and state management</li>
+<li><code>WebSocketServiceTests</code>: Real-time communication</li>
+<li><code>Web3ServiceTests</code>: Wallet integration</li>
+<li><code>WalletViewModelTests</code>: Wallet UI logic</li>
+</ul>
+<h3 id="ui-tests"><a class="header" href="#ui-tests">UI Tests</a></h3>
+<ul>
+<li><code>WalletUITests</code>: Wallet connection flow</li>
+<li><code>ShootingAppUITests</code>: Core gameplay elements</li>
+</ul>
+<p>Run tests:</p>
+<pre><code class="language-bash">xcodebuild test -workspace ShootingApp.xcworkspace -scheme ShootingApp -destination 'platform=iOS Simulator,name=iPhone 15'
+</code></pre>
+<h2 id="smart-contract-tests"><a class="header" href="#smart-contract-tests">Smart Contract Tests</a></h2>
+<p>Current test coverage:</p>
+<ul>
+<li>Token deployment</li>
+<li>Access control</li>
+<li>Basic token operations</li>
+</ul>
+<p>Run tests:</p>
+<pre><code class="language-bash">npx hardhat test
+</code></pre>
+<h2 id="server-tests"><a class="header" href="#server-tests">Server Tests</a></h2>
+<p>Work in Progress - To be implemented in Q1 2025:</p>
+<ul>
+<li>WebSocket connection handling</li>
+<li>Player state management</li>
+<li>Game event processing</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="deployment-guide"><a class="header" href="#deployment-guide">Deployment Guide</a></h1>
+<h2 id="current-deployment"><a class="header" href="#current-deployment">Current Deployment</a></h2>
+<h3 id="ios-app"><a class="header" href="#ios-app">iOS App</a></h3>
+<ul>
+<li>Development: TestFlight internal testing</li>
+<li>Distribution: Pending App Store review</li>
+</ul>
+<h3 id="smart-contracts-2"><a class="header" href="#smart-contracts-2">Smart Contracts</a></h3>
+<p>Currently deployed on Sepolia testnet:</p>
+<ul>
+<li>Token Contract: [Contract Address Pending]</li>
+<li>Achievement NFT: [Contract Address Pending]</li>
+</ul>
+<h3 id="game-server-1"><a class="header" href="#game-server-1">Game Server</a></h3>
+<ul>
+<li>WebSocket Server: Port 8182</li>
+<li>REST API: [Work in Progress]</li>
+</ul>
+<h2 id="deployment-process"><a class="header" href="#deployment-process">Deployment Process</a></h2>
+<h3 id="ios-app-1"><a class="header" href="#ios-app-1">iOS App</a></h3>
+<ol>
+<li>Archive in Xcode</li>
+<li>Upload to TestFlight</li>
+<li>Submit for review</li>
+</ol>
+<h3 id="smart-contracts-3"><a class="header" href="#smart-contracts-3">Smart Contracts</a></h3>
+<ol>
+<li>Deploy token contract</li>
+</ol>
+<pre><code class="language-bash">npx hardhat run scripts/deploy.ts --network sepolia
+</code></pre>
+<ol start="2">
+<li>Verify on Etherscan</li>
+</ol>
+<pre><code class="language-bash">npx hardhat verify --network sepolia [CONTRACT_ADDRESS]
+</code></pre>
+<h3 id="server-deployment"><a class="header" href="#server-deployment">Server Deployment</a></h3>
+<ol>
+<li>Build server</li>
+</ol>
+<pre><code class="language-bash">npm run build
+</code></pre>
+<ol start="2">
+<li>Start production server</li>
+</ol>
+<pre><code class="language-bash">npm start
+</code></pre>
+<h2 id="future-deployments"><a class="header" href="#future-deployments">Future Deployments</a></h2>
+<h3 id="phase-1-q1-2025"><a class="header" href="#phase-1-q1-2025">Phase 1 (Q1 2025)</a></h3>
+<ul>
+<li>Mainnet contract deployment</li>
+<li>Production server infrastructure</li>
+<li>App Store release</li>
+</ul>
+<h3 id="phase-2-q2-2025"><a class="header" href="#phase-2-q2-2025">Phase 2 (Q2 2025)</a></h3>
+<ul>
+<li>Multiple server regions</li>
+<li>Load balancing</li>
+<li>Advanced monitoring</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="websocket-api"><a class="header" href="#websocket-api">WebSocket API</a></h1>
+<h2 id="current-implementation"><a class="header" href="#current-implementation">Current Implementation</a></h2>
+<p>The game currently uses WebSocket for real-time communication on port 8182.</p>
+<h3 id="connection"><a class="header" href="#connection">Connection</a></h3>
+<pre><code class="language-typescript">const serverURL = "ws://onedayvpn.com:8182"
+</code></pre>
+<h3 id="message-types"><a class="header" href="#message-types">Message Types</a></h3>
+<p>Current implemented messages:</p>
+<pre><code class="language-typescript">enum MessageType {
+    join = "join",
+    shoot = "shoot",
+    hit = "hit",
+    kill = "kill",
+    hitConfirmed = "hitConfirmed",
+    leave = "leave"
+}
+</code></pre>
+<h3 id="message-format"><a class="header" href="#message-format">Message Format</a></h3>
+<pre><code class="language-typescript">interface GameMessage {
+    type: MessageType;
+    playerId: string;
+    data: MessageData;
+    timestamp: Date;
+    targetPlayerId?: string;
+}
+
+interface MessageData {
+    player: Player;
+    shotId?: string;
+    hitPlayerId?: string;
+    damage?: number;
+}
+
+interface Player {
+    id: string;
+    location: LocationData;
+    heading: number;
+    timestamp: Date;
+}
+
+interface LocationData {
+    latitude: number;
+    longitude: number;
+    altitude: number;
+    accuracy: number;
+}
+</code></pre>
+<h2 id="example-messages"><a class="header" href="#example-messages">Example Messages</a></h2>
+<h3 id="join-game"><a class="header" href="#join-game">Join Game</a></h3>
+<pre><code class="language-json">{
+    "type": "join",
+    "playerId": "0x123...",
+    "data": {
+        "player": {
+            "id": "0x123...",
+            "location": {
+                "latitude": 40.7128,
+                "longitude": -74.0060,
+                "altitude": 10,
+                "accuracy": 5
+            },
+            "heading": 180,
+            "timestamp": "2024-11-28T12:00:00Z"
+        }
+    },
+    "timestamp": "2024-11-28T12:00:00Z"
+}
+</code></pre>
+<h2 id="roadmap-features"><a class="header" href="#roadmap-features">Roadmap Features</a></h2>
+<h3 id="phase-1-q1-2025-1"><a class="header" href="#phase-1-q1-2025-1">Phase 1 (Q1 2025)</a></h3>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Player authentication via JWT</li>
+<li><input disabled="" type="checkbox"/>
+Rate limiting for shoot events</li>
+<li><input disabled="" type="checkbox"/>
+Leaderboard events</li>
+<li><input disabled="" type="checkbox"/>
+Tournament lobby support</li>
+</ul>
+<h3 id="phase-2-q2-2025-1"><a class="header" href="#phase-2-q2-2025-1">Phase 2 (Q2 2025)</a></h3>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Team-based messaging</li>
+<li><input disabled="" type="checkbox"/>
+Voice chat integration</li>
+<li><input disabled="" type="checkbox"/>
+Spectator mode events</li>
+<li><input disabled="" type="checkbox"/>
+Achievement progress notifications</li>
+</ul>
+<h2 id="known-limitations"><a class="header" href="#known-limitations">Known Limitations</a></h2>
+<ol>
+<li>
+<p>Current Implementation:</p>
+<ul>
+<li>Basic reconnection logic</li>
+<li>Simple player synchronization</li>
+<li>No message compression</li>
+</ul>
+</li>
+<li>
+<p>Areas for Improvement:</p>
+<ul>
+<li>Message validation</li>
+<li>Error handling standardization</li>
+<li>Connection state management</li>
+</ul>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rest-api-work-in-progress"><a class="header" href="#rest-api-work-in-progress">REST API (Work in Progress)</a></h1>
+<h2 id="current-endpoints"><a class="header" href="#current-endpoints">Current Endpoints</a></h2>
+<h3 id="player-statistics"><a class="header" href="#player-statistics">Player Statistics</a></h3>
+<pre><code>GET /api/v1/players/{playerId}/stats
+</code></pre>
+<p>Response:</p>
+<pre><code class="language-json">{
+    "hits": 0,
+    "kills": 0,
+    "deaths": 0,
+    "accuracy": 0,
+    "playtime": 0
+}
+</code></pre>
+<h3 id="achievements-planned"><a class="header" href="#achievements-planned">Achievements (Planned)</a></h3>
+<p>Endpoint will be:</p>
+<pre><code>GET /api/v1/players/{playerId}/achievements
+POST /api/v1/achievements/verify
+</code></pre>
+<h2 id="planned-endpoints"><a class="header" href="#planned-endpoints">Planned Endpoints</a></h2>
+<h3 id="phase-1-q1-2025-2"><a class="header" href="#phase-1-q1-2025-2">Phase 1 (Q1 2025)</a></h3>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Tournament Management
+<ul>
+<li>Create tournaments</li>
+<li>Join tournaments</li>
+<li>Tournament results</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"/>
+Player Rankings
+<ul>
+<li>Global leaderboard</li>
+<li>Weekly rankings</li>
+<li>Tournament rankings</li>
+</ul>
+</li>
+</ul>
+<h3 id="phase-2-q2-2025-2"><a class="header" href="#phase-2-q2-2025-2">Phase 2 (Q2 2025)</a></h3>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Team Management
+<ul>
+<li>Team creation</li>
+<li>Team invitations</li>
+<li>Team statistics</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"/>
+Match History
+<ul>
+<li>Match details</li>
+<li>Player performance</li>
+<li>Replay data</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="game-events"><a class="header" href="#game-events">Game Events</a></h1>
+<h2 id="current-events"><a class="header" href="#current-events">Current Events</a></h2>
+<p>The game emits several events via NotificationCenter:</p>
+<pre><code class="language-swift">extension Notification.Name {
+    static let walletConnectionChanged = Notification.Name("WalletConnectionChanged")
+    static let playerWasHit = Notification.Name("playerWasHit")
+    static let playerHitTarget = Notification.Name("playerHitTarget")
+    static let playerKilledTarget = Notification.Name("playerKilledTarget")
+    static let playerDied = Notification.Name("playerDied")
+    static let playerRespawned = Notification.Name("playerRespawned")
+    static let connectionLost = Notification.Name("connectionLost")
+}
+</code></pre>
+<h2 id="event-usage"><a class="header" href="#event-usage">Event Usage</a></h2>
+<h3 id="player-events"><a class="header" href="#player-events">Player Events</a></h3>
+<ul>
+<li><code>playerWasHit</code>: Triggered when player receives damage</li>
+<li><code>playerHitTarget</code>: Fired when successfully hitting another player</li>
+<li><code>playerKilledTarget</code>: Triggered on achieving a kill</li>
+<li><code>playerDied</code>: Emitted when player health reaches zero</li>
+<li><code>playerRespawned</code>: Fired after respawn cooldown</li>
+</ul>
+<h3 id="connection-events"><a class="header" href="#connection-events">Connection Events</a></h3>
+<ul>
+<li><code>walletConnectionChanged</code>: MetaMask connection status update</li>
+<li><code>connectionLost</code>: WebSocket disconnection event</li>
+</ul>
+<h2 id="planned-events"><a class="header" href="#planned-events">Planned Events</a></h2>
+<h3 id="phase-1-q1-2025-3"><a class="header" href="#phase-1-q1-2025-3">Phase 1 (Q1 2025)</a></h3>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Achievement progress events</li>
+<li><input disabled="" type="checkbox"/>
+Tournament status updates</li>
+<li><input disabled="" type="checkbox"/>
+Reward distribution events</li>
+</ul>
+<h3 id="phase-2-q2-2025-3"><a class="header" href="#phase-2-q2-2025-3">Phase 2 (Q2 2025)</a></h3>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Team events</li>
+<li><input disabled="" type="checkbox"/>
+Voice chat status</li>
+<li><input disabled="" type="checkbox"/>
+Match start/end events</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="team-structure"><a class="header" href="#team-structure">Team Structure</a></h1>
+<h2 id="core-team"><a class="header" href="#core-team">Core Team</a></h2>
+<h3 id="development-team-15"><a class="header" href="#development-team-15">Development Team (15%)</a></h3>
+<ul>
+<li>Lead iOS Developer</li>
+<li>Smart Contract Developer</li>
+<li>Backend Developer</li>
+<li>Game Designer</li>
+</ul>
+<h3 id="advisors-5"><a class="header" href="#advisors-5">Advisors (5%)</a></h3>
+<ul>
+<li>Technical Advisor</li>
+<li>Gaming Industry Advisor</li>
+<li>Blockchain Security Advisor</li>
+</ul>
+<h3 id="operations-5"><a class="header" href="#operations-5">Operations (5%)</a></h3>
+<ul>
+<li>Community Manager</li>
+<li>Marketing Specialist</li>
+<li>Legal Advisor</li>
+</ul>
+<h3 id="reserve-5"><a class="header" href="#reserve-5">Reserve (5%)</a></h3>
+<ul>
+<li>Future hires</li>
+<li>Emergency fund</li>
+<li>Strategic partnerships</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="team-roles--responsibilities"><a class="header" href="#team-roles--responsibilities">Team Roles &amp; Responsibilities</a></h1>
+<h2 id="development"><a class="header" href="#development">Development</a></h2>
+<h3 id="ios-development-1"><a class="header" href="#ios-development-1">iOS Development</a></h3>
+<ul>
+<li>Core game mechanics</li>
+<li>AR implementation</li>
+<li>MetaMask integration</li>
+<li>Performance optimization</li>
+</ul>
+<h3 id="blockchain-development"><a class="header" href="#blockchain-development">Blockchain Development</a></h3>
+<ul>
+<li>Smart contract development</li>
+<li>Token management</li>
+<li>Achievement NFTs</li>
+<li>Security auditing</li>
+</ul>
+<h3 id="backend-development"><a class="header" href="#backend-development">Backend Development</a></h3>
+<ul>
+<li>Server architecture</li>
+<li>WebSocket implementation</li>
+<li>Player data management</li>
+<li>Game state synchronization</li>
+</ul>
+<h2 id="operations"><a class="header" href="#operations">Operations</a></h2>
+<h3 id="community-management"><a class="header" href="#community-management">Community Management</a></h3>
+<ul>
+<li>Discord community</li>
+<li>Twitter engagement</li>
+<li>Bug reports</li>
+<li>Player feedback</li>
+</ul>
+<h3 id="business-development-1"><a class="header" href="#business-development-1">Business Development</a></h3>
+<ul>
+<li>Strategic partnerships</li>
+<li>Token listings</li>
+<li>Marketing campaigns</li>
+<li>Industry relationships</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="contact-information"><a class="header" href="#contact-information">Contact Information</a></h1>
+<h2 id="official-channels"><a class="header" href="#official-channels">Official Channels</a></h2>
+<h3 id="development-1"><a class="header" href="#development-1">Development</a></h3>
+<ul>
+<li>GitHub: <a href="https://github.com/JFCaBa/ShootingApp">JFCaBa/ShootingApp</a></li>
+<li>Technical Support: <a href="mailto:support@onedayvpn.com">support@onedayvpn.com</a></li>
+</ul>
+<h3 id="community"><a class="header" href="#community">Community</a></h3>
+<ul>
+<li>Discord: [Coming Soon]</li>
+<li>Twitter: <a href="https://twitter.com/ShootingDApp">@ShootingDApp</a></li>
+</ul>
+<h3 id="business"><a class="header" href="#business">Business</a></h3>
+<ul>
+<li>Partnerships: <a href="mailto:partnerships@onedayvpn.com">partnerships@onedayvpn.com</a></li>
+<li>Press: <a href="mailto:press@onedayvpn.com">press@onedayvpn.com</a></li>
+</ul>
+<h2 id="security-1"><a class="header" href="#security-1">Security</a></h2>
+<h3 id="bug-reports"><a class="header" href="#bug-reports">Bug Reports</a></h3>
+<p>For security vulnerabilities, please email:
+<a href="mailto:security@onedayvpn.com">security@onedayvpn.com</a></p>
+<h3 id="audit-reports"><a class="header" href="#audit-reports">Audit Reports</a></h3>
+<p>Coming in Q1 2025</p>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+    </body>
+</html>
