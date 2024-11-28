@@ -4,6 +4,7 @@
 
 ### Development Team (15%)
 - Lead iOS Developer
+- Android Developer
 - Smart Contract Developer
 - Backend Developer
 - Game Designer

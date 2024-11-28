@@ -16,7 +16,7 @@ graph TD
 ## Components
 
 ### Game Client
-- Unity-based iOS app
+- Native-based iOS/Android app
 - Web3 integration via MetaMask
 - Real-time location tracking
 - AR capabilities
