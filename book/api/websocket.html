@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js dark">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>WebSocket API - ShootingDApp Documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.ico">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom.css">
+
+        <!-- Mermaid support -->
+        <script src="https://unpkg.com/mermaid@8.13.3/dist/mermaid.min.js"></script>
+        <script>
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default'
+            });
+        </script>
+    </head>
+    <body>
+        <div id="content">
+            <h1 id="websocket-api"><a class="header" href="#websocket-api">WebSocket API</a></h1>
+<h2 id="current-implementation"><a class="header" href="#current-implementation">Current Implementation</a></h2>
+<p>The game currently uses WebSocket for real-time communication on port 8182.</p>
+<h3 id="connection"><a class="header" href="#connection">Connection</a></h3>
+<pre><code class="language-typescript">const serverURL = "ws://onedayvpn.com:8182"
+</code></pre>
+<h3 id="message-types"><a class="header" href="#message-types">Message Types</a></h3>
+<p>Current implemented messages:</p>
+<pre><code class="language-typescript">enum MessageType {
+    join = "join",
+    shoot = "shoot",
+    hit = "hit",
+    kill = "kill",
+    hitConfirmed = "hitConfirmed",
+    leave = "leave"
+}
+</code></pre>
+<h3 id="message-format"><a class="header" href="#message-format">Message Format</a></h3>
+<pre><code class="language-typescript">interface GameMessage {
+    type: MessageType;
+    playerId: string;
+    data: MessageData;
+    timestamp: Date;
+    targetPlayerId?: string;
+}
+
+interface MessageData {
+    player: Player;
+    shotId?: string;
+    hitPlayerId?: string;
+    damage?: number;
+}
+
+interface Player {
+    id: string;
+    location: LocationData;
+    heading: number;
+    timestamp: Date;
+}
+
+interface LocationData {
+    latitude: number;
+    longitude: number;
+    altitude: number;
+    accuracy: number;
+}
+</code></pre>
+<h2 id="example-messages"><a class="header" href="#example-messages">Example Messages</a></h2>
+<h3 id="join-game"><a class="header" href="#join-game">Join Game</a></h3>
+<pre><code class="language-json">{
+    "type": "join",
+    "playerId": "0x123...",
+    "data": {
+        "player": {
+            "id": "0x123...",
+            "location": {
+                "latitude": 40.7128,
+                "longitude": -74.0060,
+                "altitude": 10,
+                "accuracy": 5
+            },
+            "heading": 180,
+            "timestamp": "2024-11-28T12:00:00Z"
+        }
+    },
+    "timestamp": "2024-11-28T12:00:00Z"
+}
+</code></pre>
+<h2 id="roadmap-features"><a class="header" href="#roadmap-features">Roadmap Features</a></h2>
+<h3 id="phase-1-q1-2025"><a class="header" href="#phase-1-q1-2025">Phase 1 (Q1 2025)</a></h3>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Player authentication via JWT</li>
+<li><input disabled="" type="checkbox"/>
+Rate limiting for shoot events</li>
+<li><input disabled="" type="checkbox"/>
+Leaderboard events</li>
+<li><input disabled="" type="checkbox"/>
+Tournament lobby support</li>
+</ul>
+<h3 id="phase-2-q2-2025"><a class="header" href="#phase-2-q2-2025">Phase 2 (Q2 2025)</a></h3>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Team-based messaging</li>
+<li><input disabled="" type="checkbox"/>
+Voice chat integration</li>
+<li><input disabled="" type="checkbox"/>
+Spectator mode events</li>
+<li><input disabled="" type="checkbox"/>
+Achievement progress notifications</li>
+</ul>
+<h2 id="known-limitations"><a class="header" href="#known-limitations">Known Limitations</a></h2>
+<ol>
+<li>
+<p>Current Implementation:</p>
+<ul>
+<li>Basic reconnection logic</li>
+<li>Simple player synchronization</li>
+<li>No message compression</li>
+</ul>
+</li>
+<li>
+<p>Areas for Improvement:</p>
+<ul>
+<li>Message validation</li>
+<li>Error handling standardization</li>
+<li>Connection state management</li>
+</ul>
+</li>
+</ol>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+    </body>
+</html>

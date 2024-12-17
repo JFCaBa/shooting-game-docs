@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js dark">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Testing - ShootingDApp Documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.ico">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom.css">
+
+        <!-- Mermaid support -->
+        <script src="https://unpkg.com/mermaid@8.13.3/dist/mermaid.min.js"></script>
+        <script>
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default'
+            });
+        </script>
+    </head>
+    <body>
+        <div id="content">
+            <h1 id="testing-guide"><a class="header" href="#testing-guide">Testing Guide</a></h1>
+<h2 id="ios-tests"><a class="header" href="#ios-tests">iOS Tests</a></h2>
+<p>Current test coverage includes:</p>
+<h3 id="unit-tests"><a class="header" href="#unit-tests">Unit Tests</a></h3>
+<ul>
+<li><code>GameManagerTests</code>: Game logic and state management</li>
+<li><code>WebSocketServiceTests</code>: Real-time communication</li>
+<li><code>Web3ServiceTests</code>: Wallet integration</li>
+<li><code>WalletViewModelTests</code>: Wallet UI logic</li>
+</ul>
+<h3 id="ui-tests"><a class="header" href="#ui-tests">UI Tests</a></h3>
+<ul>
+<li><code>WalletUITests</code>: Wallet connection flow</li>
+<li><code>ShootingAppUITests</code>: Core gameplay elements</li>
+</ul>
+<p>Run tests:</p>
+<pre><code class="language-bash">xcodebuild test -workspace ShootingApp.xcworkspace -scheme ShootingApp -destination 'platform=iOS Simulator,name=iPhone 15'
+</code></pre>
+<h2 id="smart-contract-tests"><a class="header" href="#smart-contract-tests">Smart Contract Tests</a></h2>
+<p>Current test coverage:</p>
+<ul>
+<li>Token deployment</li>
+<li>Access control</li>
+<li>Basic token operations</li>
+</ul>
+<p>Run tests:</p>
+<pre><code class="language-bash">npx hardhat test
+</code></pre>
+<h2 id="server-tests"><a class="header" href="#server-tests">Server Tests</a></h2>
+<p>Work in Progress - To be implemented in Q1 2025:</p>
+<ul>
+<li>WebSocket connection handling</li>
+<li>Player state management</li>
+<li>Game event processing</li>
+</ul>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+    </body>
+</html>
