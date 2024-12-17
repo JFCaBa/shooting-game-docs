@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js dark">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Setup - ShootingDApp Documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.ico">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom.css">
+
+        <!-- Mermaid support -->
+        <script src="https://unpkg.com/mermaid@8.13.3/dist/mermaid.min.js"></script>
+        <script>
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default'
+            });
+        </script>
+    </head>
+    <body>
+        <div id="content">
+            <h1 id="development-setup"><a class="header" href="#development-setup">Development Setup</a></h1>
+<h2 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h2>
+<ul>
+<li>Xcode 15.3+</li>
+<li>iOS 17.0+</li>
+<li>Swift 5.9</li>
+<li>Node.js v18+</li>
+<li>Hardhat</li>
+<li>MetaMask iOS app</li>
+</ul>
+<h2 id="repositories-in-the-project"><a class="header" href="#repositories-in-the-project">Repositories in the Project</a></h2>
+<pre><code>shootingApp/                # iOS client application
+shooting-game-token/        # Smart contracts             
+shootingApp-server/         # Game server
+</code></pre>
+<h2 id="environment-setup"><a class="header" href="#environment-setup">Environment Setup</a></h2>
+<h3 id="ios-development"><a class="header" href="#ios-development">iOS Development</a></h3>
+<ol>
+<li>Clone the repository</li>
+</ol>
+<pre><code class="language-bash">git clone https://github.com/JFCaBa/ShootingApp.git
+cd ShootingApp/iOS
+</code></pre>
+<h3 id="smart-contract-development"><a class="header" href="#smart-contract-development">Smart Contract Development</a></h3>
+<ol>
+<li>Install dependencies</li>
+</ol>
+<pre><code class="language-bash">cd contracts
+npm install
+</code></pre>
+<ol start="2">
+<li>Configure environment</li>
+</ol>
+<pre><code class="language-bash">cp .env.example .env
+# Edit .env with your configuration
+</code></pre>
+<h3 id="server-development"><a class="header" href="#server-development">Server Development</a></h3>
+<ol>
+<li>Install dependencies</li>
+</ol>
+<pre><code class="language-bash">cd server
+npm install
+</code></pre>
+<ol start="2">
+<li>Start development server</li>
+</ol>
+<pre><code class="language-bash">npm run dev
+</code></pre>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+    </body>
+</html>

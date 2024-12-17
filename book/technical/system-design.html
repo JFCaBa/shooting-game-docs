@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js dark">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>System Design - ShootingDApp Documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.ico">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/custom.css">
+
+        <!-- Mermaid support -->
+        <script src="https://unpkg.com/mermaid@8.13.3/dist/mermaid.min.js"></script>
+        <script>
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default'
+            });
+        </script>
+    </head>
+    <body>
+        <div id="content">
+            <h1 id="system-design"><a class="header" href="#system-design">System Design</a></h1>
+<h2 id="client-architecture"><a class="header" href="#client-architecture">Client Architecture</a></h2>
+<pre class="mermaid">graph TD
+    A[HomeViewController] --&gt; B[HomeViewModel]
+    B --&gt; C[GameManager]
+    C --&gt; D[WebSocketService]
+    C --&gt; E[PlayerManager]
+    C --&gt; F[Web3Service]
+    D --&gt; G[Server]
+    F --&gt; H[MetaMask]
+</pre>
+<h2 id="server-architecture"><a class="header" href="#server-architecture">Server Architecture</a></h2>
+<pre class="mermaid">graph TD
+    A[WebSocket Server] --&gt; B[Player Service]
+    A --&gt; C[Game Service]
+    B --&gt; D[MongoDB]
+    C --&gt; E[Achievement Service]
+    E --&gt; F[Smart Contracts]
+</pre>
+<h2 id="data-flow"><a class="header" href="#data-flow">Data Flow</a></h2>
+<ul>
+<li>Real-time player position updates</li>
+<li>Event-based shot detection</li>
+<li>Achievement progress tracking</li>
+<li>Token rewards distribution</li>
+</ul>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+    </body>
+</html>
